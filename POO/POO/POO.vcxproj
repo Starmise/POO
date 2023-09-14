@@ -133,6 +133,7 @@
     <ClCompile Include="src\Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Commons.h" />
     <ClInclude Include="include\Persona.h" />
     <ClInclude Include="include\Rectangle.h" />
   </ItemGroup>

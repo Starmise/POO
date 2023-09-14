@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Persona.h"
 #include "Rectangle.h"
+#include "Commons.h"
 
 using namespace std;
 
@@ -13,7 +14,51 @@ using namespace std;
 
 int main()
 {
-	
+	int opc = 0;
+	Aldeano aldeano;
+
+	cout << "Empiezas con 64 esmeraldas " << endl;
+
+	while (opc <= 0)
+	{
+		cout << "" << endl;
+		cout << "El estado actual del aldeano es: " << aldeano.tipo << endl;
+		cout << "Ingresa el comando (las opciones son): " << endl;
+		cout << "rayo		mordida		  mapa		  libro		  composta" << endl;
+		cout << "(Puedes curar a un aldeano zombie con una *manzana* o tener una oferta especial si el aldeano llega al nvl 10 con *max*) " << endl;
+		string command;
+		cin >> command;
+		aldeano.Command(command);
+
+		cout << "Quieres aceptar su oferta? (ingresa *aceptar* o *nel*) " << endl;
+		string tradeo;
+		cin >> tradeo;
+		if (aldeano.emerald < aldeano.oferta) {
+		cout << "Uy, qué lastima, pero no tienes suficientes esmeraldas" << endl;
+		tradeo = "nel";
+		}
+		
+		aldeano.Trading(tradeo);
+
+		string experiencia;
+		aldeano.Experiencia(experiencia);
+
+		cout << "¿Deseas continuar? presiona 0, de lo contrario presiona otro número mayor a 0" << endl;
+		cin >> opc;
+	}
+
+	/*Vector2 position;
+	position.setVector2(3, 4);
+	position.print();
+	position.dotProduct(2);
+	position.print();
+	Vector2 posit2;
+	posit2.setVector2(2, 5);
+	int result = position.crosssProdcut(posit2);
+	cout << "Result = " << result << endl;
+	position.print();*/
+
+	/*
 	float num1;
 	float num2;
 
@@ -31,7 +76,7 @@ int main()
 	cout << "El ancho del rectángulo es: " << Figura.getWeight() << endl;
 	cout << "La altura del rectángulo es: " << Figura.getHeight() << endl;
 	cout << "El área del rectángulo es: " << Figura.getAreas() << endl;
-	cout << "El perímetro del rectángulo es: " << Figura.getPerimeter() << endl;
+	cout << "El perímetro del rectángulo es: " << Figura.getPerimeter() << endl;*/
 
 	/*Persona Pepe;
 	Pepe.setName("Pepe");
