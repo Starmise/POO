@@ -14,8 +14,8 @@ using namespace std;
 
 int main()
 {
-	int opc = 0;
-	Aldeano aldeano;
+	/*int opc = 0;
+	Vector2 aldeano;
 
 	cout << "Empiezas con 64 esmeraldas " << endl;
 
@@ -40,12 +40,11 @@ int main()
 		
 		aldeano.Trading(tradeo);
 
-		string experiencia;
-		aldeano.Experiencia(experiencia);
+		aldeano.Experiencia();
 
 		cout << "¿Deseas continuar? presiona 0, de lo contrario presiona otro número mayor a 0" << endl;
 		cin >> opc;
-	}
+	}*/
 
 	/*Vector2 position;
 	position.setVector2(3, 4);

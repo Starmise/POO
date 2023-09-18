@@ -128,11 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Aldeano.cpp" />
+    <ClCompile Include="src\Commandh.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Persona.cpp" />
     <ClCompile Include="src\Rectangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Aldeano.h" />
+    <ClInclude Include="include\commandh.h" />
     <ClInclude Include="include\Commons.h" />
     <ClInclude Include="include\Persona.h" />
     <ClInclude Include="include\Rectangle.h" />
