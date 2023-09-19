@@ -16,4 +16,10 @@ void aldeano::setType(aldeanoTipo type)
 void aldeano::setHealth(int health)
 {
 	vida = health;
+	cout << "El aldeano tiene: " << vida << " de vida" << endl;
+}
+
+void aldeano::setName(string name)
+{
+	nombre = name;
 }

@@ -28,14 +28,23 @@ public:
 		return vida;
 	}
 
+	string getName() {
+		return nombre;
+	}
+
 	void setType(aldeanoTipo type);
+
 	void setHealth(int health);
+
+	void setName(string name);
 
 	aldeanoTipo tipo = aldeanoTipo::Normal;
 
-private:
 	int xp = 0;
 	int emerald = 64;
 	int oferta = 0;
 	int vida;
+
+private:
+	string nombre;
 };

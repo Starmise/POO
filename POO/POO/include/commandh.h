@@ -19,8 +19,9 @@ public:
 		{
 			Villager.setType(Villager.Bruja);
 			cout << "El aldeano ahora es de tipo: bruja " << Villager.tipo << endl;
-			cout << "La bruja te ofrece: poción, a cambio de 24 esmeraldas " << endl;
+			cout << "La bruja te ofrece: pocion, a cambio de 24 esmeraldas " << endl;
 			oferta = 24;
+			Villager.vida -= 20;
 			xp++;
 		}
 		if (command == "mordida")
@@ -28,13 +29,14 @@ public:
 			Villager.setType(Villager.Zombie);
 			cout << "El aldeano ahora es de tipo: zombie " << Villager.tipo << endl;
 			cout << "El zombie te ofrece: palo de madera, a cambio de 32 esmeraldas " << endl;
+			Villager.vida -= 40;
 			oferta = 32;
 			xp++;
 		}
 		if (command == "mapa")
 		{
 			Villager.setType(Villager.Cartografo);
-			cout << "El aldeano ahora es de tipo: cartógrafo " << Villager.tipo << endl;
+			cout << "El aldeano ahora es de tipo: cartografo " << Villager.tipo << endl;
 			cout << "El aldeano te ofrece: papel, a cambio de 8 esmeraldas " << endl;
 			oferta = 8;
 			xp++;
@@ -43,7 +45,7 @@ public:
 		{
 			Villager.setType(Villager.Agricultor);
 			cout << "El aldeano ahora es de tipo: agricultor " << Villager.tipo << endl;
-			cout << "El aldeano te ofrece: sandía, a cambio de 10 esmeraldas " << endl;
+			cout << "El aldeano te ofrece: sandia, a cambio de 10 esmeraldas " << endl;
 			oferta = 10;
 			xp++;
 		}
@@ -61,6 +63,7 @@ public:
 			cout << "El aldeano ahora es de tipo: aldeano curado " << Villager.tipo << endl;
 			cout << "El aldeano te ofrece: 32 esmeraldas, a cambio de 16 esmeraldas " << endl;
 			oferta = -32;
+			Villager.vida += 10;
 			xp++;
 		}
 		if ((command == "max") && (xp >= 10))

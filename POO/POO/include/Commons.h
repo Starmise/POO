@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 using namespace std;
@@ -17,7 +17,7 @@ enum aldeanoTipo {
 struct Vector2 {
 	//int x;
 	//int y;
-	
+
 	/*void setVector2(int _x, int _y) {
 			x = _x;
 			y = _y;
@@ -47,4 +47,3 @@ struct Vector2 {
 			cout << "X: " << x << ", Y: " << y << endl;
 		}*/
 };
-
