@@ -1,22 +1,35 @@
-﻿#include <iostream>
-#include "Persona.h"
-#include "Rectangle.h"
-#include "Commons.h"
-#include "Aldeano.h"
-#include "commandh.h"
+﻿#include "Commons.h"
+#include "Bank.h"
 
-using namespace std;
-
-/*int  multiplicar(int num1, int num2)
-{
-    int multi = num1 * num2;
-    cout << "El resultado de la multiplicaci�n es: " << multi << endl;
-    return multi;
-}*/
+//#include "Student.h"
+//#include "Aldeano.h"
+//#include "commandh.h"
 
 int main()
 {
-    int opc = 0;
+    CuentaBancaria Cuenta;
+    
+    Cuenta.menu();
+
+
+    /*miEstudiante estudiante("videojuegos", "Luis", 9.82, 19, 18300);
+
+    cout << "Ok, el alumo " << estudiante.nombre << ", con un promedio de " << estudiante.prom <<
+        " con una edad de " << estudiante.edad << " años, y perteneciente a la carrera" << estudiante.carrera <<
+        " ha sido registrado" << endl;*/
+
+    /*cout << "Hola, ingresa el nombre del estudiante: " << endl;
+    cin >> estudiante.nombre;
+    cout << "Ingresa la carrera del estudiante: " << endl;
+    cin >> estudiante.carrera;
+    cout << "Ingresa el ID del estudiante: " << endl;
+    cin >> estudiante.id;
+    cout << "Ingresa el promedio del estudiante: " << endl;
+    cin >> estudiante.prom;
+    cout << "Ingresa la edad del estudiante: " << endl;
+    cin >> estudiante.edad;*/
+
+    /*int opc = 0;
     aldeano villager;
     Command command;
 
@@ -52,7 +65,7 @@ int main()
 
         cout << "Deseas continuar? presiona 0, de lo contrario presiona otro numero mayor a 0" << endl;
         cin >> opc;
-    }
+    }*/
 
     return 0;
 }
