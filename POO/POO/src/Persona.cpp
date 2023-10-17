@@ -4,16 +4,21 @@ Persona::Persona()
 {
 }
 
-Persona::~Persona()
-{
+Persona::Persona(const char* _nombre) {
+	m_nombre2 = new char[strlen(_nombre) + 1];
+	strcpy_s(m_nombre2, strlen(_nombre) + 1, _nombre);
+	cout << "Nombre: " << m_nombre2 << endl;
 }
 
-void Persona::setName(string name)
-{
-	nombre = name;
+Persona::~Persona() {
+	delete[] m_nombre2;
 }
 
-void Persona::setAge(int age)
-{
-	edad = age;
+
+void Persona::setName(string name) {
+	m_nombre = name;
+}
+
+void Persona::setAge(int age) {
+	m_edad = age;
 }

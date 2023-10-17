@@ -130,19 +130,25 @@
   <ItemGroup>
     <ClCompile Include="src\Aldeano.cpp" />
     <ClCompile Include="src\Bank.cpp" />
+    <ClCompile Include="src\Calculadora.cpp" />
     <ClCompile Include="src\Commandh.cpp" />
+    <ClCompile Include="src\Estudainte.cpp" />
     <ClCompile Include="src\Main.cpp" />
     <ClCompile Include="src\Persona.cpp" />
+    <ClCompile Include="src\Rectangulo.cpp" />
     <ClCompile Include="src\Rectangle.cpp" />
     <ClCompile Include="src\Student.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Aldeano.h" />
     <ClInclude Include="include\Bank.h" />
+    <ClInclude Include="include\Calculadora.h" />
     <ClInclude Include="include\commandh.h" />
     <ClInclude Include="include\Commons.h" />
+    <ClInclude Include="include\Estudainte.h" />
     <ClInclude Include="include\Persona.h" />
     <ClInclude Include="include\Rectangle.h" />
+    <ClInclude Include="include\Rectangulo.h" />
     <ClInclude Include="include\Student.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

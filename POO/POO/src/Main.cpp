@@ -1,71 +1,42 @@
 ﻿#include "Commons.h"
-#include "Bank.h"
+#include "Persona.h"
+#include "Estudainte.h"
 
-//#include "Student.h"
-//#include "Aldeano.h"
-//#include "commandh.h"
+int main()  {
 
-int main()
-{
-    CuentaBancaria Cuenta;
-    
-    Cuenta.menu();
+  Persona* persona = new Persona("Luis");
 
+  delete persona;
 
-    /*miEstudiante estudiante("videojuegos", "Luis", 9.82, 19, 18300);
+  const int numEstudiant = 3;
+  Estudiante** estudiantes = new Estudiante * [numEstudiant];
+  estudiantes[0] = new Estudiante("Luis Angel", 19, 9.6f);
+  estudiantes[1] = new Estudiante("Jhon", 18, 5.0f);
+  estudiantes[2] = new Estudiante("Arturo", 20, 7.77f);
 
-    cout << "Ok, el alumo " << estudiante.nombre << ", con un promedio de " << estudiante.prom <<
-        " con una edad de " << estudiante.edad << " años, y perteneciente a la carrera" << estudiante.carrera <<
-        " ha sido registrado" << endl;*/
+  for (int i = 0; i < numEstudiant; i++)
+  {
+    estudiantes[i]->printData();
+  }
+  for (int i = 0; i < numEstudiant; i++)
+  {
+    delete estudiantes[i];
+  }
 
-    /*cout << "Hola, ingresa el nombre del estudiante: " << endl;
-    cin >> estudiante.nombre;
-    cout << "Ingresa la carrera del estudiante: " << endl;
-    cin >> estudiante.carrera;
-    cout << "Ingresa el ID del estudiante: " << endl;
-    cin >> estudiante.id;
-    cout << "Ingresa el promedio del estudiante: " << endl;
-    cin >> estudiante.prom;
-    cout << "Ingresa la edad del estudiante: " << endl;
-    cin >> estudiante.edad;*/
+  /*Rectang rect1;
+  Rectang rect2;
 
-    /*int opc = 0;
-    aldeano villager;
-    Command command;
+  rect1.setAncho(7.0);
+  rect2.setAltura(10.0);
 
-    cout << "Empiezas con 64 esmeraldas " << endl;
+  rect1.setAncho(4.5);
+  rect2.setAltura(5.0);
 
-    while (opc <= 0)
-    {
-        cout << "" << endl;
-        cout << "El estado actual del aldeano es: " << villager.tipo << endl;
-        villager.setHealth(100  );
+  float area1 = rect1.getArea();
+  float area2 = rect2.getArea();
 
-        villager.setName("Juan");
-        cout << "Nombre: " << villager.getName() << endl;
-
-        cout << "Ingresa el comando (las opciones son): " << endl;
-        cout << "rayo		mordida		  mapa		  libro		  composta" << endl;
-        cout << "(Puedes curar a un aldeano zombie con una *manzana* o tener una oferta especial si el aldeano llega al nvl 10 con *max*) " << endl;
-        string usuarioCommand;
-        cin >> usuarioCommand;
-        command.comandos(usuarioCommand); 
-
-        cout << "Quieres aceptar su oferta? (ingresa *aceptar* o *nel*) " << endl;
-        string tradeo;
-        cin >> tradeo;
-        if (villager.emerald < villager.oferta) {
-            cout << "Uy, que lastima, pero no tienes suficientes esmeraldas" << endl;
-            tradeo = "nel";                                                                              
-        }
-
-        command.Trading(tradeo);
-
-        command.Experiencia(); // Llama a la función de la clase Command
-
-        cout << "Deseas continuar? presiona 0, de lo contrario presiona otro numero mayor a 0" << endl;
-        cin >> opc;
-    }*/
-
-    return 0;
+  cout << "Área del rectángulo 1: " << area1 << endl;
+  cout << "Área del rectángulo 2: " << area2 << endl;
+*/
+  return 0;
 }

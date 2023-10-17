@@ -5,9 +5,11 @@ public:
 	CuentaBancaria();
 	~CuentaBancaria();
 
-	void consulta();
+	void
+		consulta();
 
-	void menu();
+	void 
+		menu();
 
 	string propietor;
 	int opc;
@@ -16,14 +18,18 @@ protected:
 	int noCuenta;
 	float tran;
 
-	void transaction();
-	void transactionDep();
+	void 
+		transaction();
+
+	void 
+		transactionDep();
 
 private:
-	float saldo = 18000;
-	float tasa = 0.016;
+	float m_saldo = 18000;
+	float m_tasa = 0.016;
 	int tiempo;
 
-	void interesSimple();
+	void 
+		interesSimple();
 
 };

@@ -8,22 +8,18 @@ Rectangulo::~Rectangulo()
 {
 }
 
-void Rectangulo::setWeight(int weight)
-{
-	ancho = weight;
+void Rectangulo::setWeight(int weight)	{
+	m_ancho = weight;
 }
 
-void Rectangulo::setHeight(int height)
-{
-	altura = height;
+void Rectangulo::setHeight(int height)	{
+	m_altura = height;
 }
 
-void Rectangulo::setAreas()
-{
-	area = altura * ancho;
+void Rectangulo::setAreas()	{
+	m_area = m_altura * m_ancho;
 }
 
-void Rectangulo::setPerimeter()
-{
-	perimetro = 2 * (altura + ancho);
+void Rectangulo::setPerimeter()	{
+	m_perimetro = 2 * (m_altura + m_ancho);
 }

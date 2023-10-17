@@ -11,21 +11,30 @@ public:
 	//Destructor
 	~Persona();
 
+	Persona(const char* m_nombre);
+
 	//This method is in charge of returning a name
-	string getName() {
-		return nombre;
+	string 
+		getName() {
+		return m_nombre;
 	}
 
 	//This method is in charge of returning an age
-	int getAge() {
-		return edad;
+	int 
+		getAge() {
+		return m_edad;
 	}
 
-	void setName(string name);
+	void 
+		setName(string name);
 
-	void setAge(int age);
+	void 
+		setAge(int age);
+
+public:
+	char* m_nombre2;
 
 private:
-	string nombre;
-	int edad;
+	string m_nombre;
+	int m_edad;
 };

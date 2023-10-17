@@ -1,4 +1,3 @@
-#include "Commons.h"
 #include "Student.h"
 
 miEstudiante::miEstudiante()
@@ -9,8 +8,7 @@ miEstudiante::~miEstudiante()
 {
 }
 
-miEstudiante::miEstudiante(string _career, string _name, float _prome, int _age, int _iD)
-{
+miEstudiante::miEstudiante(string _career, string _name, float _prome, int _age, int _iD){
 	carrera = _career;
 	nombre = _name;
 	prom = _prome;

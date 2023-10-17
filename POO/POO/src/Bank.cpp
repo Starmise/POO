@@ -9,8 +9,7 @@ CuentaBancaria::~CuentaBancaria()
 {
 }
 
-void CuentaBancaria::menu()
-{
+void CuentaBancaria::menu()	{
 	cout << "Hola, ingrese una opción: " << endl;
 	cout << "1.Consulta de saldo " << endl;
 	cout << "2.Transacción (retirar)" << endl;
@@ -42,52 +41,52 @@ void CuentaBancaria::menu()
 }
 
 
-void CuentaBancaria::consulta()
-{
-	cout << "El saldo de su cuenta es: $" << saldo << endl;
+void CuentaBancaria::consulta()	{
+	cout << "El saldo de su cuenta es: $" << m_saldo << endl;
 	menu();
 }
 
 
-void CuentaBancaria::transaction()
-{
+void CuentaBancaria::transaction()	{
 	cout << "Ingrese la cantidad que quiere transferir: "<< endl;
 	cin >> tran;
 
-	if (saldo < tran)
+	if (m_saldo < tran)
 	{
-		cout << "Usted no cuenta con suficiente dinero en su cuenta para realizar dicha transacción"<< endl;
+		cout << "Usted no cuenta con suficiente dinero en su cuenta";
+		cout<< "para realizar dicha transacción"<< endl;
 	}
 	else {
-		saldo -= tran;
-		cout << "Se ha realizado exitosamente la transacción. Su saldo final es de: "<< saldo << endl;
+		m_saldo -= tran;
+		cout << "Se ha realizado exitosamente la transacción.";
+		cout<<"Su saldo final es de : "<< m_saldo << endl;
 	}
 	menu();
 }
 
-void CuentaBancaria::transactionDep()
-{
+void CuentaBancaria::transactionDep()	{
 	cout << "Ingrese la cantidad que quiere transferir: " << endl;
 	cin >> tran;
 
-	if (saldo < tran)
+	if (m_saldo < tran)
 	{
-		cout << "Usted no cuenta con suficiente dinero en su cuenta para realizar dicha transacción" << endl;
+		cout << "Usted no cuenta con suficiente dinero en su cuenta";
+		cout << "para realizar dicha transacción" << endl;
 	}
 	else {
-		saldo += tran;
-		cout << "Se ha realizado exitosamente la transacción. Su saldo final es de: " << saldo << endl;
+		m_saldo += tran;
+		cout << "Se ha realizado exitosamente la transacción.";
+		cout << "Su saldo final es de : " << m_saldo << endl;
 	}
 	menu();
 }
 
 
-void CuentaBancaria::interesSimple()
-{
+void CuentaBancaria::interesSimple()	{
 	cout << "Ingrese la cantidad de tiempo: " << endl;
 	cin >> tiempo;
 
-	float interes = tran * tasa * tiempo;
+	float interes = tran * m_tasa * tiempo;
 	cout << "El interes es de: " << interes << endl;
 
 	menu();

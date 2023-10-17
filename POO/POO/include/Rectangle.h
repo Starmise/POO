@@ -9,33 +9,41 @@ public:
 	Rectangulo();
 	~Rectangulo();
 
-	int getWeight() {
-		return ancho;
+	int 
+		getWeight() {
+		return m_ancho;
 	}
 
-	int getHeight() {
-		return altura;
+	int 
+		getHeight() {
+		return m_altura;
 	}
 
-	int getAreas() {
-		return area;
+	int 
+		getAreas() {
+		return m_area;
 	}
 
-	int getPerimeter() {
-		return perimetro;
+	int 
+		getPerimeter() {
+		return m_perimetro;
 	}
 
-	void setWeight(int weight);
+	void 
+		setWeight(int weight);
 
-	void setHeight(int height);
+	void 
+		setHeight(int height);
 
-	void setAreas();
+	void 
+		setAreas();
 
-	void setPerimeter();
+	void 
+		setPerimeter();
 
 private:
-	int ancho;
-	int altura;
-	float area;
-	float perimetro;
+	int m_ancho;
+	int m_altura;
+	float m_area;
+	float m_perimetro;
 };
