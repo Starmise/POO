@@ -131,7 +131,10 @@
     <ClCompile Include="src\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AbstractFactory.h" />
     <ClInclude Include="include\ActivityRegister.h" />
+    <ClInclude Include="include\Factory.h" />
+    <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

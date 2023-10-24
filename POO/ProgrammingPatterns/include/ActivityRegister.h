@@ -23,6 +23,7 @@ public:
   void 
     addActivity(const string actividad) {
     if (m_numActs < m_maxActs) {
+      //m_acts[m_numActs++] = actividad;
       m_acts.push_back(actividad);
     }
     else {
@@ -34,6 +35,8 @@ public:
     showActivities() {
     cout << "Registro de Actividades:" << endl;
     for (const string actividad:m_acts) {
+      //for (int i = 0; i < m_numActs; i++)
+      //cout << m_acts[i] << endl;
       cout << actividad << endl;
     }
   }
