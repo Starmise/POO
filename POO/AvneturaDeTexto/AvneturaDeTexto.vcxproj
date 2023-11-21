@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c0810ef9-372c-4b17-a3f6-e915c7f44c89}</ProjectGuid>
-    <RootNamespace>ProgrammingPatterns</RootNamespace>
+    <ProjectGuid>{74a5f252-c12f-4a4f-9cbc-aab46d0bd0e3}</ProjectGuid>
+    <RootNamespace>AvneturaDeTexto</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,16 +128,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Main.cpp" />
+    <ClInclude Include="include\BaseApp.h" />
+    <ClInclude Include="include\Enemy.h" />
+    <ClInclude Include="include\Jugador.h" />
+    <ClInclude Include="include\Mazmorra.h" />
+    <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Room.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AbstractFactory.h" />
-    <ClInclude Include="include\ActivityRegister.h" />
-    <ClInclude Include="include\Builder.h" />
-    <ClInclude Include="include\Factory.h" />
-    <ClInclude Include="include\Pizza.h" />
-    <ClInclude Include="include\Prerequisites.h" />
-    <ClInclude Include="include\Singleton.h" />
+    <ClCompile Include="src\BaseApp.cpp" />
+    <ClCompile Include="src\Enemy.cpp" />
+    <ClCompile Include="src\Jugador.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Mazmorra.cpp" />
+    <ClCompile Include="src\Room.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
