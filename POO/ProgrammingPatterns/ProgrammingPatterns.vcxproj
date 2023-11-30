@@ -133,10 +133,15 @@
   <ItemGroup>
     <ClInclude Include="include\AbstractFactory.h" />
     <ClInclude Include="include\ActivityRegister.h" />
+    <ClInclude Include="include\Adapter.h" />
     <ClInclude Include="include\Builder.h" />
+    <ClInclude Include="include\Cafeteria.h" />
+    <ClInclude Include="include\Círculo.h" />
+    <ClInclude Include="include\Decorator.h" />
     <ClInclude Include="include\Factory.h" />
     <ClInclude Include="include\Pizza.h" />
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Prototype.h" />
     <ClInclude Include="include\Singleton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
