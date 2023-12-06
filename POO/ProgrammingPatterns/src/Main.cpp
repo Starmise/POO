@@ -11,17 +11,21 @@
 #include "Prototype.h"
 #include "Decorator.h"
 #include "Cafeteria.h"
+#include "Composite.h"
+#include "Archivo.h"
 
 //Singleton* Singleton::m_instance = nullptr;
 //RegistroActividad* RegistroActividad::m_instance = nullptr;
 
 int main() {
+  //Singleton
   /*Singleton* SingleMan = Singleton::getInstance();
   SingleMan->setValue(27);
 
   Singleton* SingleMan2 = Singleton::getInstance();
   std::cout << "Value: " << SingleMan2->getValue() << std::endl;*/
 
+  //Singleton Register
   /*RegistroActividad* Registro = RegistroActividad::getInstance();
   RegistroActividad* Registro2 = RegistroActividad::getInstance();
   Registro->addActivity("Primer actividad");
@@ -31,6 +35,7 @@ int main() {
 
   Registro2->showActivities();*/
 
+  //Factory
   /*Factory* factory = new ConcreteFactory();
   Product* product = factory->crearProducto();
   product->operacion();
@@ -47,7 +52,8 @@ int main() {
   delete vehiculo;
 */
 
-  /*//ABSTRACT FACTORY
+  //ABSTRACT FACTORY
+  /*
   AbstractFactory* AFactory = new ConcreteAbsFactory();
   ProductA* productA = AFactory->crearProductoA();
   ProductB* productB = AFactory->crearProductoB();
@@ -69,7 +75,6 @@ int main() {
 
   delete constructor;
   delete producto;*/
-  
   
   //Pizza Builder
   /* 
@@ -97,10 +102,10 @@ int main() {
   objNuevo->newMethod();
 
   delete objViejo;
-  delete objNuevo;
+  delete objNuevo; */
 
   //Adapter de círculo
-  Circulo* circle = new Circulo();
+  /*Circulo* circle = new Circulo();
   Cuadrado* square = new Cuadrado();
   Dibujable* AdCircle = new CirculoAdapter(circle);
   Dibujable* AdSquare = new CuadradoAdapter(square);
@@ -114,7 +119,7 @@ int main() {
   delete AdSquare;*/
 
   //Prototype
-  Prototype* prototype = new PrototipocConcreto();
+  /*Prototype* prototype = new PrototipocConcreto();
   prototype->configurar("Ejemplo");
 
   Prototype* copia = prototype->clonar();
@@ -122,9 +127,9 @@ int main() {
   copia->print();
 
   delete prototype;
-  delete copia;
+  delete copia;*/
 
-  //Decorator
+  //DECORATOR
   /*ConcreteComponent* objeto = new ConcreteComponent();
   ConcreteDecoratorA* decoratorA = new ConcreteDecoratorA(objeto);
   ConcreteDecoratorB* decoratorB = new ConcreteDecoratorB(decoratorA);
@@ -137,8 +142,8 @@ int main() {
   delete decoratorA;
   delete decoratorB;*/
 
-  //Cafeteria decorator
-  Cafeteria* cafeteria = new Cafeteria();
+  //CAFETERIA DECORATOR
+  /*Cafeteria* cafeteria = new Cafeteria();
   Leche* cafeLeche = new Leche(cafeteria);
   Azucar* cafeAzucar = new Azucar(cafeteria);
 
@@ -149,5 +154,33 @@ int main() {
   delete cafeteria;
   delete cafeAzucar;
   delete cafeLeche;
-  return 0;
+  return 0;*/
+
+  //COMPOSITE
+  /*leaf* hoja1 = new leaf();
+  leaf* hoja2 = new leaf();
+  Composite* composite = new Composite();
+
+  composite->addLeaf(hoja1);
+  composite->addLeaf(hoja2);
+
+  composite->operacion();
+
+  delete hoja1;
+  delete hoja2;
+  delete composite;*/
+
+  //ARCHIVO COMPOSITE
+  SistemaArchivo* archivo1 = new SistemaArchivo();
+  SistemaArchivo* archivo2 = new SistemaArchivo();
+  SistemaCarpeta* carpeta = new SistemaCarpeta();
+  carpeta->agregarSistema(archivo1);
+  carpeta->agregarSistema(archivo2);
+
+  carpeta->mostrarInfo();
+
+  delete archivo1;
+  delete archivo2;
+  delete carpeta;
+
 }

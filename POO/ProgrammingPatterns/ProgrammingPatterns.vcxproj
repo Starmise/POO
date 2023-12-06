@@ -134,8 +134,10 @@
     <ClInclude Include="include\AbstractFactory.h" />
     <ClInclude Include="include\ActivityRegister.h" />
     <ClInclude Include="include\Adapter.h" />
+    <ClInclude Include="include\Archivo.h" />
     <ClInclude Include="include\Builder.h" />
     <ClInclude Include="include\Cafeteria.h" />
+    <ClInclude Include="include\Composite.h" />
     <ClInclude Include="include\Círculo.h" />
     <ClInclude Include="include\Decorator.h" />
     <ClInclude Include="include\Factory.h" />
