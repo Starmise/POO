@@ -1,15 +1,18 @@
 #pragma once
 #include "Prerequisites.h"
 
+//----------------Ejemplo para el Pattern Builder----------------
+
+//Clase para las pizzas por cocinar
 class Pizza
 {
 public:
-  void addParts(const string _part) {
+  void addParts(const string _part) { //Función para agregar partes a la pizza
     m_parts.push_back(_part);
   }
 
 	void
-		print() {
+		print() { //Función para imprimir las partes de la pizza
 		cout << "Partes de la pizza: ";
 		for (int i = 0; i < m_parts.size(); i++)
 		{
@@ -22,6 +25,7 @@ private:
   vector<string> m_parts;
 };
 
+//Interfaz para definir las partes del objeto para cocinar la pizza
 class Oven
 {
 public:
@@ -41,6 +45,7 @@ public:
 		Pizza* getProduct() = 0;
 };
 
+//Implementación de los métodos de Oven para hacer una pizza hawaiana
 class HawaianPizza : public Oven {
 public:
 	HawaianPizza() {
@@ -75,6 +80,7 @@ private:
 	Pizza* m_product;
 };
 
+//Implementación de los métodos de Oven para hacer una pizza veggie
 class VeggiePizza : public Oven {
 public:
 	VeggiePizza() {
@@ -109,6 +115,7 @@ private:
 	Pizza* m_product;
 };
 
+// Método que funciona como director para construir una pizza con un Oven específico
 class Chef {
 public:
 	Chef(Oven* _oven) : m_builder(_oven) {}

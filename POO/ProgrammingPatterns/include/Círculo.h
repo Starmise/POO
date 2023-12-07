@@ -1,6 +1,9 @@
 #pragma once
 #include "Prerequisites.h"
 
+//----------------Ejemplo para el Pattern Adapter----------------
+
+//En este caso la depreciada es un círculo
 class Circulo {
 public:
   virtual
@@ -10,6 +13,7 @@ public:
   }
 };
 
+//En este caso la depreciada es un cuadrado
 class Cuadrado {
 public:
   virtual
@@ -19,6 +23,7 @@ public:
   }
 };
 
+//Clase que funciona como una nueva interfaz para cuadrado y círculo
 class Dibujable {
 public:
   virtual
@@ -28,6 +33,7 @@ public:
   }
 };
 
+//Implementa la clase dibujable heredando el círculo para poder dibujarlo
 class CirculoAdapter : public Dibujable {
 public:
   CirculoAdapter(Circulo* circulo) : m_Circulo(circulo) {}
@@ -41,6 +47,7 @@ public:
   Circulo* m_Circulo;
 };
 
+//Implementa la clase dibujable heredando el cuadrado para poder dibujarlo
 class CuadradoAdapter : public Dibujable {
 public:
   CuadradoAdapter(Cuadrado* cuadrado) : m_cuadrado(cuadrado) {}

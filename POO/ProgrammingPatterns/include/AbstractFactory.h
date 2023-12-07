@@ -42,6 +42,7 @@ public:
   }
 };
 
+//Clase concreta para la implementación de abstract factory
 class ConcreteAbsFactory : public AbstractFactory {
 public:
   ProductA* crearProductoA() override {

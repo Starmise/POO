@@ -1,16 +1,17 @@
 #pragma once
 #include "Prerequisites.h"
 
+//Clase para el objeto a construir
 class 
 	bProduct {
 public:
 	void 
-		agregarParte(const string& _parte) {
+		agregarParte(const string& _parte) { //Función para poder agregar nuevas partes
 		m_partes.push_back(_parte);
 	}
 
 	void 
-		print() {
+		print() { //Función para imprimir las partes
 		cout << "Partes del producto: ";
 		for (int i = 0; i < m_partes.size(); i++)
 		{
@@ -19,9 +20,10 @@ public:
 	}
 
 private:
-	vector<string> m_partes;
+	vector<string> m_partes; //Vector para las partes del producto
 };
 
+ //Interfaz para definir las partes del objeto
 class Builder
 {
 public:
@@ -36,7 +38,8 @@ public:
 
 };
 
-class BuilderConcreto: public Builder {
+//Clase para implementar las partes del producto
+class BuilderConcreto: public Builder { 
 public:
 	BuilderConcreto() {
 		m_product = new bProduct();
@@ -60,6 +63,7 @@ private:
 	bProduct* m_product;
 };
 
+//Clase que se encarga de la contrucción del producto
 class Director {
 public:
 	Director(Builder* _builder) : m_builder(_builder) {}

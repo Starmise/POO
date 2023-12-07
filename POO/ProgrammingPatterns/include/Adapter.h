@@ -1,7 +1,7 @@
 #pragma once
 #include "Prerequisites.h"
 
-//Depreciada
+//Depreciada para la interfaz vieja
 class InterfazVieja {
 public:
   virtual
@@ -11,7 +11,7 @@ public:
   }
 };
 
-//Objetivo
+//Objetivo para una nueva interfaz
 class InterfazNueva {
 public:
   virtual
@@ -21,6 +21,7 @@ public:
   }
 };
 
+//Implementa la nueva interfaz pero heredando la interfaz vieja para adaptarla
 class Adapter : public InterfazNueva {
 public:
   Adapter(InterfazVieja* _vieja) : m_interfazVieja(_vieja) {}

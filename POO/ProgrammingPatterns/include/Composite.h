@@ -1,12 +1,14 @@
 #pragma once
 #include "Prerequisites.h"
 
+//Clase base para definir Component2
 class
   Component2 {
 public:
   virtual void operacion() = 0;
 };
 
+//Interfaz que hereda Component2
 class
   leaf : public Component2 {
   void operacion() override {
@@ -14,6 +16,7 @@ class
   }
 };
 
+//Clase composite para poder gestionar mejor el Compononent2
 class
   Composite : public Component2 {
 public:

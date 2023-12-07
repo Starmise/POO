@@ -42,6 +42,10 @@ public:
   }
 };
 
+
+//Ejemplo del pattern Factory
+
+//Clase encargada de ser el objeto base de los vehículos que se crearán
 class Vehiculo {
 public:
   virtual 
@@ -51,6 +55,7 @@ public:
   }
 };
 
+//Esta clase se usa para realizar las operaciones de coche tras recibir un vehículo
 class ConcreteCoche : public Vehiculo {
 public:
   void
@@ -59,6 +64,7 @@ public:
   }
 };
 
+//Esta clase se usa para realizar las operaciones de bicicleca tras recibir el producto
 class ConcreteBicicleta : public Vehiculo {
 public:
   void
@@ -67,12 +73,17 @@ public:
   }
 };
 
+/*
+  Brief: Esta clase es el objeto base que sirve para crear las instancias de
+  cada vehñiculo con la función "crearVehículo()"
+*/
 class FactoryVehiculos {
 public: 
   virtual
     Vehiculo* crearVehiculo() = 0;
 };
 
+//Esta clase crea nuevos vehículos de tipo coche
 class ConcreteFactoryCoche : public FactoryVehiculos {
 public:
   Vehiculo* crearVehiculo() override {
@@ -80,6 +91,7 @@ public:
   }
 };
 
+//Esta clase crea nuevos vehículos de tipo bicicleta
   class ConcreteFactoryBicicleta : public FactoryVehiculos {
   public:
     Vehiculo* crearVehiculo() override {

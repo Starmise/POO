@@ -1,6 +1,9 @@
 #pragma once
 #include "Prerequisites.h"
 
+//----------------Ejemplo para el Pattern Decorator----------------
+
+//Clase concreta para la cafeteria
 class
   Cafeteria {
 public:
@@ -9,12 +12,14 @@ public:
   }
 };
 
+//Clase base para los condimentos
 class
   Condimento {
 public:
   virtual void decorar() = 0;
 };
 
+//Decorador base para añadir la leche usando Condimento
 class
   Leche : public Condimento {
 public:
@@ -30,6 +35,7 @@ private:
   Cafeteria* m_component;
 };
 
+//Decorador base para añadir la azucar usando Condimento
 class
   Azucar : public Condimento {
 public:

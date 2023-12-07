@@ -1,6 +1,9 @@
 #pragma once
 #include "Prerequisites.h"
 
+//----------------Ejemplo para el Pattern Composite----------------
+
+//Clase base para definir Archivo
 class
   Archivo {
 public:
@@ -9,6 +12,7 @@ public:
   }
 };
 
+//Clase base para definir Carpeta
 class
   Carpeta {
 public:
@@ -17,6 +21,7 @@ public:
   }
 };
 
+//Clase que funciona como interfaz
 class
   Sistema {
 public:
