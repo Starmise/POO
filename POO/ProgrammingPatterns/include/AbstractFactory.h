@@ -1,6 +1,9 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*Es como Factory, pero este patrón permite una mayor abstracción debido a que 
+define una interfaz para crear familias de objetos relacionados.*/
+
 //Clase base para productos A
 class ProductA {
 public:

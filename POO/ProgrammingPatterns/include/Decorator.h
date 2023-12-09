@@ -1,6 +1,10 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*El patrón Decorator puede agregar funciones a objetos existentes dinámicamente. 
+Actúa como una alternativa a la herencia, ya que permite agregar nuevas funciones
+a objetos individuales.*/
+
 //Interfaz base - Componente
 class
   Component {

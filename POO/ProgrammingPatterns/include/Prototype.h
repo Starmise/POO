@@ -1,6 +1,11 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*El patrón Prototype se usa para crear nuevos objetos a partir de una clase que
+funciona como un prototipo existente. Define un método dentro de dicho prototipo
+que sirve para poder clonar este objeto y poder configurarlo cuando se cree uno
+nuevo, evitando así la necesidad de crear subclases para cada tipo de objeto.*/
+
 //Clase con la lógica para prototype
 class Prototype
 {

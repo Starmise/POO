@@ -1,5 +1,9 @@
 #pragma once
 
+/*El patrón Singleton es útil porque hace que una clase tenga una sola instancia 
+y permite acceder de forma global a esta instancia. Es útil cuando se necesita 
+una única instancia para las acciones del sistema.*/
+
 class Singleton
 {
 public:

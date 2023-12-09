@@ -1,6 +1,9 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*El patrón Factory se usa para la creación de objetos a partir de una interfaz para
+poder crearlos. Ayuda a separar el código de la lógica que usa el objeto para crearlo.*/
+
 /*
   Brief: Esta clase está encargada de ser el objeto base de los productos que se crearán
 */

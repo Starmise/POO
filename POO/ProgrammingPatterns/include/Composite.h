@@ -1,6 +1,10 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*El patrón Composite se utiliza para tratar grupos de objetos de la misma manera 
+que un único objeto. Es por esto que se puede usar para gestionar de mejor forma
+los recursos.*/
+
 //Clase base para definir Component2
 class
   Component2 {

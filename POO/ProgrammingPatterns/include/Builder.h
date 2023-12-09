@@ -1,6 +1,11 @@
 #pragma once
 #include "Prerequisites.h"
 
+/*El patrón Builder se utiliza para construir un objeto complejo paso a paso
+mediante el uso de partes, además permite crear distintos tipos del mismo objeto.
+Todo esto se hace a partir de una clase llamada Director, la cuál se encarga de
+cpnstruir los objetos*/
+
 //Clase para el objeto a construir
 class 
 	bProduct {
